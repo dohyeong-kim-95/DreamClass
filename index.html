@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나는 어떤 멘토인가? | 삼성 드림클래스</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== INTRO SCREEN ===== -->
+  <section id="intro" class="screen active">
+    <div class="intro-bg">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+      <div class="floating-shape shape-4"></div>
+    </div>
+    <div class="intro-content">
+      <div class="badge">삼성 드림클래스</div>
+      <h1 class="intro-title">
+        나는 어떤<br><span class="highlight">멘토</span>인가?
+      </h1>
+      <p class="intro-subtitle">
+        당신의 경험은 어떤 방식으로<br>누군가의 내일을 바꿀까요?
+      </p>
+      <div class="intro-info">
+        <div class="info-item">
+          <span class="info-icon">&#9997;</span>
+          <span>총 8문항</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">&#9202;</span>
+          <span>약 3분 소요</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">&#127919;</span>
+          <span>4가지 유형</span>
+        </div>
+      </div>
+      <button id="start-btn" class="btn-primary" onclick="startQuiz()">
+        테스트 시작하기
+        <span class="btn-arrow">&rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ SCREEN ===== -->
+  <section id="quiz" class="screen">
+    <div class="quiz-header">
+      <div class="progress-wrapper">
+        <div class="progress-text">
+          <span id="current-q">1</span> / 8
+        </div>
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+    <div class="quiz-body">
+      <div id="question-container" class="question-container">
+        <p id="question-text" class="question-text"></p>
+        <div id="options" class="options"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULT SCREEN ===== -->
+  <section id="result" class="screen">
+    <div id="result-content" class="result-content"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
